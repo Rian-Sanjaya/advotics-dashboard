@@ -1,0 +1,80 @@
+.sales-turnover-box {
+  display: flex; 
+  justify-content: space-between;
+
+  .left-side {
+    .sales-number {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+  
+    .down-arrow-img {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+    }
+  
+    .sales-percentage {
+      color: #FD373C;
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+  
+    .sales-text {
+      font-size: 0.7rem;
+      font-weight: 300;
+    }    
+  }
+
+  .right-side {
+    margin: 0 16px;
+
+    .cart-img {
+      margin-top: 10px;
+      width: 49px;
+      height: 43.06px;
+    }
+  }
+}
+
+.content-row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card1-container {
+    width: 49%;
+  }
+
+  .card2-container,
+  .card3-container {
+    width: 24%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sales-turnover-box {
+    .left-side {
+      .sales-number {
+        font-size: 1.1rem;
+      }
+
+      .down-arrow-img {
+        width: 7px;
+        height: 7px;
+      }
+
+      .sales-percentage {
+        font-size: 0.6rem;
+      }
+
+      .sales-text {
+        font-size: 0.5rem;
+      }
+    }
+
+    .right-side {
+      margin: 0 8px;
+    }
+  }
+}

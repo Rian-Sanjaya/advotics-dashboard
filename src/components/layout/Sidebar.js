@@ -11,9 +11,9 @@ function Sidebar() {
             </div>
           </li>
           <li className="icon-container">
-            <diiv className="icon-box">
+            <div className="icon-box">
               <div><img src="/images/dashboard-icon.svg" alt="dashboard icon" /></div>
-            </diiv>
+            </div>
           </li>
         </ul>
       </div>
