@@ -1,0 +1,23 @@
+.card-wrapper {
+  display: inline-block;
+  padding: 16px;
+  background: #fff;
+  border: 0.5px solid #D7DAE2;
+  margin-top: 16px;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+
+    .title {
+      font-size: 1rem;
+      color: #AAA9B5;
+    }
+
+    .ellipsis {
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+  }
+}

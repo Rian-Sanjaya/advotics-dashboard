@@ -1,3 +1,5 @@
+import DashboardContent from "../components/dashboard/index";
+
 function Dashboard() {
   return (
     <div className="dashboard-container">
@@ -5,7 +7,7 @@ function Dashboard() {
         <div className="header-title">Dashboard</div>
       </section>
       <section className="content">
-        
+        <DashboardContent title="Market Insights" />
       </section>
     </div>
   )
