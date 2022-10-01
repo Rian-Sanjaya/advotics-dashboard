@@ -103,9 +103,12 @@ function Dashboard({ title }) {
       <div className="collapse-container">
         <section className="collapse-header">
           <span className="title" onClick={handleCollapseOpen}>{ title }</span>
-          <span className={`icon-box ${rotateIcon ? 'rotate' : ''}`} onClick={handleCollapseOpen}>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </span>
+          <div>
+            <span style={{ marginRight: 16, color: "#fff", textDecoration: "underline", fontWeight: 300, cursor: "pointer" }}>Click Here for Help</span>
+            <span className={`icon-box ${rotateIcon ? 'rotate' : ''}`} onClick={handleCollapseOpen}>
+              <FontAwesomeIcon icon={faAngleDown} />
+            </span>
+          </div>
         </section>
         <section className={`collapse-content`}>
           <section className="content-row-1">
