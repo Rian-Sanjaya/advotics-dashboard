@@ -1,3 +1,78 @@
+.dashboard-container {
+  height: 100%;
+
+  .header-content {
+    .header-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #707070C4;
+    }
+  }
+}
+
+.content {
+  margin-top: 32px;
+
+  .collapse-container {
+    .collapse-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #37B04C;
+      height: 48px;
+      padding: 0 16px;
+      margin-bottom: 16px;
+
+      .title {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .lightbulb-box {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .help-link {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font-weight: 300;
+        font-size: 0.8rem;
+        text-decoration: underline;
+      }
+
+      .icon-box {
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: #fff;
+        font-size: 1.1rem;
+
+        &.rotate {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .collapse-content {
+      transition: 0.4s ease;
+      visibility: hidden;
+      overflow: hidden;
+      background: #F7F7F7;
+    }
+  }
+}
+
 .sales-turnover-box {
   display: flex; 
   justify-content: space-between;
