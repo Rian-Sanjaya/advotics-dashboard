@@ -1,3 +1,128 @@
+.dashboard-container {
+  height: 100%;
+
+  .header-wrapper {
+    position: relative;
+
+    .header-content {
+      .header-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #707070C4;
+      }
+    }
+
+    .datepicker-collapse-container {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      background: #fff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      box-shadow: 0px 2px 3px #00000029;;
+
+      .period {
+        margin-right: 24px;
+        font-size: 1.1rem;
+        color: #888888;
+      }
+
+      .range-date {
+        margin-right: 16px;
+        font-size: 1.1rem;
+        color: #6A6A6A;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .icon-box {
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: #757575;
+        font-size: 1.5rem;
+
+        &.rotate {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .datepicker-container {
+      position: absolute;
+      right: 0;
+      top: 55px;
+      z-index: 10;
+      background: #fff;
+    }
+  }
+}
+
+.content {
+  margin-top: 32px;
+
+  .collapse-container {
+    .collapse-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #37B04C;
+      height: 48px;
+      padding: 0 16px;
+      margin-bottom: 16px;
+
+      .title {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .lightbulb-box {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .help-link {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font-weight: 300;
+        font-size: 0.8rem;
+        text-decoration: underline;
+      }
+
+      .icon-box {
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: #fff;
+        font-size: 1.1rem;
+
+        &.rotate {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .collapse-content {
+      transition: 0.4s ease;
+      visibility: hidden;
+      overflow: hidden;
+      background: #F7F7F7;
+    }
+  }
+}
+
 .sales-turnover-box {
   display: flex; 
   justify-content: space-between;
@@ -49,6 +174,18 @@
   .card2-container,
   .card3-container {
     width: 24%;
+  }
+}
+
+@media (max-width: 1077px) {
+  .content-row-2 {
+    .card1-container {
+      width: 100%;
+    }
+
+    .card2-container, .card3-container {
+      width: 49%;
+    }
   }
 }
 
