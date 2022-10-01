@@ -3,6 +3,7 @@ import { ComposedChart, Bar, Line, XAxis, YAxis,Tooltip, CartesianGrid, Legend, 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import Card from "../Card";
+import ProductList from "./ProductList";
 import "./index.scss";
 
 const dataChart = [
@@ -14,6 +15,37 @@ const dataChart = [
   {name: 'Sat', Nett: 22000, Gross: 22000}, 
   {name: 'Sun', Nett: 24000, Gross: 24000}, 
 ];
+
+const bestSKU = [
+  {
+    id: "1",
+    name: "Product 1",
+    price: "Rp 12,500",
+    soldQty: 50,
+    image: "/images/product.png",
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    price: "Rp 25,000",
+    soldQty: 870,
+    image: "/images/product.png",
+  },
+  {
+    id: "3",
+    name: "Product 3",
+    price: "Rp 523,000",
+    soldQty: 90,
+    image: "/images/product.png",
+  },
+  {
+    id: "4",
+    name: "Product 4",
+    price: "Rp 31,500",
+    soldQty: 123,
+    image: "/images/product.png",
+  },
+]
 
 const renderComposedChart = (
   <ResponsiveContainer width="100%" height={300}>
@@ -39,9 +71,9 @@ function Dashboard({ title }) {
     if (isFirstRun.current) {
       isFirstRun.current = false;
       const content = document.querySelector(".collapse-content");
-      setContentHeight(content.offsetHeight);
+      setContentHeight(content.offsetHeight + 35);
       // make deafult collapse open
-      content.style.height = content.offsetHeight + "px";
+      content.style.height = content.offsetHeight + 35 + "px";
       content.style.opacity = 1;
       setRotateIcon(!rotateIcon);
 
@@ -50,6 +82,7 @@ function Dashboard({ title }) {
       // content.style.opacity = 0;
 
       content.style.visibility = "unset";
+      content.style.overflow = "scroll";
     }
   }, [setRotateIcon, rotateIcon])
 
@@ -98,12 +131,12 @@ function Dashboard({ title }) {
             </div>
             <div className="card2-container">
               <Card title="BEST SELLING SKU" titleStyle={{ color: "#4D4F5C", fontSize: "1.1rem" }} inStyle={{ width: "100%" }}>
-
+                <ProductList bestSKU={bestSKU} />
               </Card>
             </div>
             <div className="card3-container">
               <Card title="TOP COMPETITOR SKU" titleStyle={{ color: "#4D4F5C", fontSize: "1.1rem" }} inStyle={{ width: "100%" }}>
-
+                <ProductList bestSKU={bestSKU} />
               </Card>
             </div>
           </section>
