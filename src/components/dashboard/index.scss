@@ -1,11 +1,58 @@
 .dashboard-container {
   height: 100%;
 
-  .header-content {
-    .header-title {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #707070C4;
+  .header-wrapper {
+    position: relative;
+
+    .header-content {
+      .header-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #707070C4;
+      }
+    }
+
+    .datepicker-collapse-container {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      background: #fff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .period {
+        margin-right: 24px;
+        font-size: 1.1rem;
+        color: #888888;
+      }
+
+      .range-date {
+        margin-right: 16px;
+        font-size: 1.1rem;
+        color: #6A6A6A;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .icon-box {
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: #757575;
+        font-size: 1.5rem;
+
+        &.rotate {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .datepicker-container {
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      background: #fff;
     }
   }
 }

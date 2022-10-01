@@ -70,13 +70,9 @@ function Dashboard({ title }) {
       <div className="collapse-container">
         <section className="collapse-header">
           <span className="title" onClick={handleCollapseOpen}>{ title }</span>
-          {/* <div> */}
-            {/* <span className="lightbulb-box"><img src="/images/lightbulb.png" alt="Lightbulb" /></span>
-            <button className="help-link">Click Here for Help</button> */}
-            <span className={`icon-box ${rotateIcon ? 'rotate' : ''}`} onClick={handleCollapseOpen}>
-              <FontAwesomeIcon icon={faAngleDown} />
-            </span>
-          {/* </div> */}
+          <span className={`icon-box ${rotateIcon ? 'rotate' : ''}`} onClick={handleCollapseOpen}>
+            <FontAwesomeIcon icon={faAngleDown} />
+          </span>
         </section>
         <section className={`collapse-content`}>
           <section className="content-row-1">
