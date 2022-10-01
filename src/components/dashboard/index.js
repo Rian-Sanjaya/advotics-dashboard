@@ -104,7 +104,7 @@ function Dashboard({ title }) {
         <section className="collapse-header">
           <span className="title" onClick={handleCollapseOpen}>{ title }</span>
           <div>
-            <span style={{ marginRight: 16, color: "#fff", textDecoration: "underline", fontWeight: 300, cursor: "pointer" }}>Click Here for Help</span>
+            <span className="click-help" style={{ marginRight: 16, color: "#fff", textDecoration: "underline", fontWeight: 300, cursor: "pointer" }}>Click Here for Help</span>
             <span className={`icon-box ${rotateIcon ? 'rotate' : ''}`} onClick={handleCollapseOpen}>
               <FontAwesomeIcon icon={faAngleDown} />
             </span>
